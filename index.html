@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lotus - AI-powered platform for researchers and academics to analyze qualitative and quantitative data with precision.">
+    <meta name="keywords" content="Lotus, AI analysis, qualitative research, quantitative analysis, academic research, data analysis">
+    <title>Lotus | AI-Powered Research Analysis Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4C24 4 28 12 28 20C28 28 24 36 24 36C24 36 20 28 20 20C20 12 24 4 24 4Z" fill="currentColor" opacity="0.9"/>
+                    <path d="M24 8C24 8 32 14 36 22C40 30 38 38 38 38C38 38 30 32 26 24C22 16 24 8 24 8Z" fill="currentColor" opacity="0.7"/>
+                    <path d="M24 8C24 8 16 14 12 22C8 30 10 38 10 38C10 38 18 32 22 24C26 16 24 8 24 8Z" fill="currentColor" opacity="0.7"/>
+                    <ellipse cx="24" cy="42" rx="8" ry="3" fill="currentColor" opacity="0.3"/>
+                </svg>
+                <span class="logo-text">Lotus</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#products" class="nav-link" data-i18n="nav.products">Products</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li><a href="#industries" class="nav-link" data-i18n="nav.industries">Industries</a></li>
+                <li><a href="#resources" class="nav-link" data-i18n="nav.resources">Resources</a></li>
+                <li><a href="#design" class="nav-link" data-i18n="nav.customTools">Custom Tools</a></li>
+                <li><a href="#custom" class="nav-link cta-link" data-i18n="nav.joinShortlist">Join Shortlist</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" aria-label="Switch Language">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-text" data-i18n="nav.langSwitch">عربي</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge" data-aos="fade-up" data-i18n="hero.badge">🔬 Trusted by 50+ Universities</span>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100" data-i18n="hero.title">
+                    Explore <span class="text-gradient">Lotus</span>
+                </h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.description">
+                    AI-powered platform for researchers and academics to analyze qualitative and quantitative data with precision
+                </p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#custom" class="btn btn-primary btn-lg">
+                        <span data-i18n="hero.cta.primary">Join the Shortlist</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#products" class="btn btn-outline btn-lg" data-i18n="hero.cta.secondary">
+                        Explore Features
+                    </a>
+                </div>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat">
+                        <span class="stat-number" data-count="10000">0</span>
+                        <span class="stat-label" data-i18n="hero.stat.researchers">Researchers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label" data-i18n="hero.stat.universities">Universities</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number stat-percent" data-count="99">0</span>
+                        <span class="stat-label" data-i18n="hero.stat.accuracy">Accuracy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-image-wrapper">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🌐</div>
+                        <span data-i18n="hero.card1">Arabic & English</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">📊</div>
+                        <span data-i18n="hero.card2">Data Visualization</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🤖</div>
+                        <span data-i18n="hero.card3">AI-Powered</span>
+                    </div>
+                    <div class="lotus-visual">
+                        <svg viewBox="0 0 200 200" class="lotus-svg">
+                            <defs>
+                                <linearGradient id="lotusGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#E5B441"/>
+                                    <stop offset="100%" style="stop-color:#287A7D"/>
+                                </linearGradient>
+                                <linearGradient id="lotusGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#287A7D"/>
+                                    <stop offset="100%" style="stop-color:#E5B441"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Center petal -->
+                            <path class="lotus-petal petal-center" d="M100 20 Q115 60 115 100 Q115 140 100 160 Q85 140 85 100 Q85 60 100 20" fill="url(#lotusGrad1)"/>
+                            <!-- Left petals -->
+                            <path class="lotus-petal petal-left-1" d="M100 40 Q60 50 40 90 Q30 130 50 150 Q70 130 80 100 Q90 70 100 40" fill="url(#lotusGrad2)" opacity="0.9"/>
+                            <path class="lotus-petal petal-left-2" d="M100 50 Q50 45 25 80 Q10 120 25 145 Q50 125 65 95 Q80 65 100 50" fill="url(#lotusGrad1)" opacity="0.8"/>
+                            <!-- Right petals -->
+                            <path class="lotus-petal petal-right-1" d="M100 40 Q140 50 160 90 Q170 130 150 150 Q130 130 120 100 Q110 70 100 40" fill="url(#lotusGrad2)" opacity="0.9"/>
+                            <path class="lotus-petal petal-right-2" d="M100 50 Q150 45 175 80 Q190 120 175 145 Q150 125 135 95 Q120 65 100 50" fill="url(#lotusGrad1)" opacity="0.8"/>
+                            <!-- Base -->
+                            <ellipse cx="100" cy="165" rx="35" ry="10" fill="#287A7D" opacity="0.4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#products" class="scroll-indicator">
+                <span data-i18n="hero.scroll">Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="features" id="products">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge" data-i18n="products.badge">Lotus Platform Features</span>
+                <h2 class="section-title" data-i18n="products.title">Advanced AI-Powered <span class="text-gradient">Analysis Tools</span></h2>
+                <p class="section-description" data-i18n="products.description">
+                    Lotus Platform offers comprehensive qualitative and quantitative data analysis with cutting-edge AI algorithms and natural language processing.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="products.feature1.title">Dual Language Support</h3>
+                    <p class="feature-description" data-i18n="products.feature1.desc">Full Arabic & English analysis capabilities with advanced natural language processing for both languages.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="products.feature2.title">Multi-format Processing</h3>
+                    <p class="feature-description" data-i18n="products.feature2.desc">Seamlessly process PDF, Word, CSV, Excel and more file formats with automatic data extraction and parsing.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="products.feature3.title">Automated Insights</h3>
+                    <p class="feature-description" data-i18n="products.feature3.desc">Real-time visualization and AI-generated insights that transform raw data into actionable research findings.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="products.feature4.title">Thematic Analysis</h3>
+                    <p class="feature-description" data-i18n="products.feature4.desc">AI-powered thematic coding and pattern recognition for qualitative research with customizable frameworks.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                            <line x1="3" y1="20" x2="21" y2="20"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="products.feature5.title">Statistical Analysis</h3>
+                    <p class="feature-description" data-i18n="products.feature5.desc">Comprehensive quantitative analysis with advanced statistical methods, hypothesis testing, and regression models.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="products.feature6.title">Research Integrity</h3>
+                    <p class="feature-description" data-i18n="products.feature6.desc">Built-in plagiarism detection, citation management, and data validation to ensure research quality.</p>
+                </div>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="#register" class="btn btn-primary">
+                    <span data-i18n="products.cta">Explore all products</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <span class="section-badge" data-i18n="services.badge">Lotus Services</span>
+                    <h2 class="section-title" data-i18n="services.title">Comprehensive <span class="text-gradient">Research Support</span></h2>
+                    <p class="about-text" data-i18n="services.description">
+                        We provide end-to-end services from data collection to analysis and visualization for academic and professional research teams.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong data-i18n="services.feature1.title">Custom Development</strong>
+                                <span class="feature-sub" data-i18n="services.feature1.sub">Tailored tool creation</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong data-i18n="services.feature2.title">Research Consultation</strong>
+                                <span class="feature-sub" data-i18n="services.feature2.sub">Expert guidance</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                    <path d="M21.21 15.89A10 10 0 118 2.83"/>
+                                    <path d="M22 12A10 10 0 0012 2v10z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong data-i18n="services.feature3.title">Data Visualization</strong>
+                                <span class="feature-sub" data-i18n="services.feature3.sub">Interactive charts & reports</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong data-i18n="services.feature4.title">Team Training</strong>
+                                <span class="feature-sub" data-i18n="services.feature4.sub">Workshops & support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#register" class="btn btn-primary" style="margin-top: 32px;">
+                        <span data-i18n="services.cta">Discover our services</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image-container">
+                        <div class="about-shape shape-1"></div>
+                        <div class="about-shape shape-2"></div>
+                        <div class="about-card">
+                            <div class="about-card-content">
+                                <div class="about-card-icon">🎯</div>
+                                <h4 data-i18n="services.card1.title">Precision</h4>
+                                <p data-i18n="services.card1.desc">99% accuracy in data analysis</p>
+                            </div>
+                        </div>
+                        <div class="about-card about-card-2">
+                            <div class="about-card-content">
+                                <div class="about-card-icon">⚡</div>
+                                <h4 data-i18n="services.card2.title">Speed</h4>
+                                <p data-i18n="services.card2.desc">Real-time processing & insights</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries" id="industries">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge" data-i18n="industries.badge">Industries We Serve</span>
+                <h2 class="section-title" data-i18n="industries.title">Serving <span class="text-gradient">Diverse Sectors</span></h2>
+                <p class="section-description" data-i18n="industries.description">
+                    Our platform supports researchers and analysts across multiple industries with specialized tools and methodologies.
+                </p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="industry-icon">🎓</div>
+                    <h3 data-i18n="industries.card1.title">Academic Research</h3>
+                    <p data-i18n="industries.card1.desc">Universities & institutions</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="industry-icon">📈</div>
+                    <h3 data-i18n="industries.card2.title">Corporate Analysis</h3>
+                    <p data-i18n="industries.card2.desc">Market & business insights</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="industry-icon">🏛️</div>
+                    <h3 data-i18n="industries.card3.title">Policy & Think Tanks</h3>
+                    <p data-i18n="industries.card3.desc">Government & NGOs</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="industry-icon">🏥</div>
+                    <h3 data-i18n="industries.card4.title">Healthcare Research</h3>
+                    <p data-i18n="industries.card4.desc">Clinical & medical studies</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="industry-icon">🔬</div>
+                    <h3 data-i18n="industries.card5.title">Scientific Research</h3>
+                    <p data-i18n="industries.card5.desc">Labs & research centers</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="industry-icon">📚</div>
+                    <h3 data-i18n="industries.card6.title">Education</h3>
+                    <p data-i18n="industries.card6.desc">Schools & learning institutions</p>
+                </div>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="#register" class="btn btn-outline-dark">
+                    <span data-i18n="industries.cta">View all industries</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <div class="resources-grid">
+                <div class="resources-content" data-aos="fade-right">
+                    <span class="section-badge" data-i18n="resources.badge">Lotus Resources</span>
+                    <h2 class="section-title" data-i18n="resources.title">Knowledge Center & <span class="text-gradient">Support</span></h2>
+                    <p class="resources-text" data-i18n="resources.description">
+                        Access tutorials, research methodologies, case studies, and best practices for qualitative data analysis.
+                    </p>
+                    <div class="resources-list">
+                        <div class="resource-item">
+                            <div class="resource-icon">📖</div>
+                            <div class="resource-info">
+                                <h4 data-i18n="resources.item1.title">Methodology Guides</h4>
+                                <p data-i18n="resources.item1.desc">Step-by-step research guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-icon">🎬</div>
+                            <div class="resource-info">
+                                <h4 data-i18n="resources.item2.title">Training & Tutorials</h4>
+                                <p data-i18n="resources.item2.desc">Video courses & workshops</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-icon">📋</div>
+                            <div class="resource-info">
+                                <h4 data-i18n="resources.item3.title">Case Studies</h4>
+                                <p data-i18n="resources.item3.desc">Real-world examples</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#register" class="btn btn-primary" style="margin-top: 32px;">
+                        <span data-i18n="resources.cta">Explore resources</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="resources-visual" data-aos="fade-left">
+                    <div class="resources-cards">
+                        <div class="resource-card card-methodology">
+                            <div class="rc-icon">📖</div>
+                            <span data-i18n="resources.card1">Methodology</span>
+                        </div>
+                        <div class="resource-card card-tutorials">
+                            <div class="rc-icon">🎬</div>
+                            <span data-i18n="resources.card2">Tutorials</span>
+                        </div>
+                        <div class="resource-card card-case">
+                            <div class="rc-icon">📋</div>
+                            <span data-i18n="resources.card3">Case Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Your Tool Section -->
+    <section class="design-tool" id="design">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge" data-i18n="design.badge">Custom Solutions</span>
+                <h2 class="section-title" data-i18n="design.title">Design Your <span class="text-gradient">Tool</span></h2>
+                <p class="section-description" data-i18n="design.description">
+                    Tailored solutions for your research. Request custom-developed tools and modules specifically designed for your methodology and requirements.
+                </p>
+            </div>
+            <div class="design-grid">
+                <div class="design-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="design-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="design.card1.title">Custom Modules</h3>
+                    <p data-i18n="design.card1.desc">Purpose-built analysis modules designed specifically for your research needs and data types.</p>
+                    <ul class="design-features">
+                        <li data-i18n="design.card1.feature1">Tailored algorithms</li>
+                        <li data-i18n="design.card1.feature2">Custom data pipelines</li>
+                        <li data-i18n="design.card1.feature3">Specialized outputs</li>
+                    </ul>
+                </div>
+                <div class="design-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="design-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="design.card2.title">Methodology-Specific</h3>
+                    <p data-i18n="design.card2.desc">Tools aligned with your specific research methodology, whether qualitative, quantitative, or mixed methods.</p>
+                    <ul class="design-features">
+                        <li data-i18n="design.card2.feature1">Grounded theory support</li>
+                        <li data-i18n="design.card2.feature2">Content analysis tools</li>
+                        <li data-i18n="design.card2.feature3">Statistical frameworks</li>
+                    </ul>
+                </div>
+                <div class="design-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="design-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                            <line x1="12" y1="2" x2="12" y2="22"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="design.card3.title">Workflow Integration</h3>
+                    <p data-i18n="design.card3.desc">Seamless connectivity with your existing tools, databases, and research workflow systems.</p>
+                    <ul class="design-features">
+                        <li data-i18n="design.card3.feature1">API connections</li>
+                        <li data-i18n="design.card3.feature2">Data import/export</li>
+                        <li data-i18n="design.card3.feature3">Third-party integrations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="design-cta" data-aos="fade-up">
+                <div class="design-cta-content">
+                    <div class="design-cta-text">
+                        <h3 data-i18n="design.cta.title">Ready to Build Your Custom Tool?</h3>
+                        <p data-i18n="design.cta.desc">Our team of experts will work with you to create the perfect solution for your research needs.</p>
+                    </div>
+                    <a href="#custom" class="btn btn-primary btn-lg">
+                        <span data-i18n="design.cta.btn">Request Custom Tool</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Registration Section -->
+    <section class="custom-tool" id="custom">
+        <div class="custom-bg">
+            <div class="custom-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="custom-grid">
+                <div class="custom-content" data-aos="fade-right">
+                    <span class="section-badge section-badge-light" data-i18n="register.badge">🚀 Limited Early Access</span>
+                    <h2 class="section-title section-title-light" data-i18n="register.title">Join the <span class="text-gradient-light">Shortlist</span></h2>
+                    <p class="custom-description" data-i18n="register.description">
+                        Be among the first researchers to experience Lotus. Sign up now to secure your spot and get exclusive early access to our AI-powered research platform.
+                    </p>
+                    <div class="custom-features">
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <div>
+                                <strong data-i18n="register.feature1.title">Priority Access</strong>
+                                <span data-i18n="register.feature1.sub">Be first to use Lotus</span>
+                            </div>
+                        </div>
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <div>
+                                <strong data-i18n="register.feature2.title">Exclusive Benefits</strong>
+                                <span data-i18n="register.feature2.sub">Special founding member perks</span>
+                            </div>
+                        </div>
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <div>
+                                <strong data-i18n="register.feature3.title">Shape the Future</strong>
+                                <span data-i18n="register.feature3.sub">Your feedback matters</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shortlist-counter">
+                        <div class="counter-ring">
+                            <span class="counter-number">247</span>
+                        </div>
+                        <span class="counter-text" data-i18n="register.counter">researchers already on the shortlist</span>
+                    </div>
+                </div>
+                <div class="custom-form-container" data-aos="fade-left">
+                    <form class="register-form" id="registrationForm">
+                        <div class="form-badge" data-i18n="register.form.badge">⭐ Early Access</div>
+                        <h3 class="form-title" data-i18n="register.form.title">Get on the Shortlist</h3>
+                        <p class="form-subtitle" data-i18n="register.form.subtitle">Secure your spot as a founding member</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName"><span data-i18n="register.form.firstName">First Name</span> <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" data-i18n-placeholder="placeholder.firstName" required>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName"><span data-i18n="register.form.lastName">Last Name</span> <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" data-i18n-placeholder="placeholder.lastName" required>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><span data-i18n="register.form.email">Email Address</span> <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" data-i18n-placeholder="placeholder.email" required>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone"><span data-i18n="register.form.phone">Phone Number</span> <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" data-i18n-placeholder="placeholder.phone" required>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="university"><span data-i18n="register.form.university">University / Institution</span> <span class="required">*</span></label>
+                            <input type="text" id="university" name="university" placeholder="Enter your university or institution" data-i18n-placeholder="placeholder.university" required>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company" data-i18n="register.form.department">Department / Organization</label>
+                                <input type="text" id="company" name="company" placeholder="Enter your department" data-i18n-placeholder="placeholder.department">
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="position" data-i18n="register.form.position">Position / Role</label>
+                                <input type="text" id="position" name="position" placeholder="Enter your role" data-i18n-placeholder="placeholder.position">
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="academicStatus"><span data-i18n="register.form.youAre">You Are</span> <span class="required">*</span></label>
+                            <select id="academicStatus" name="academicStatus" required>
+                                <option value="" data-i18n="register.form.youAre.placeholder">Select your current status</option>
+                                <option value="university-student" data-i18n="register.form.youAre.student">University Student</option>
+                                <option value="graduate-master" data-i18n="register.form.youAre.graduate">Graduate willing to pursue Master studies</option>
+                                <option value="master-student" data-i18n="register.form.youAre.master">Master Student</option>
+                                <option value="phd-student" data-i18n="register.form.youAre.phd">PhD Student</option>
+                                <option value="other" data-i18n="register.form.youAre.other">Other</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group" id="otherStatusGroup" style="display: none;">
+                            <label for="otherStatus"><span data-i18n="register.form.otherSpecify">Please Specify</span> <span class="required">*</span></label>
+                            <input type="text" id="otherStatus" name="otherStatus" placeholder="Please specify your current status" data-i18n-placeholder="placeholder.otherStatus">
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience" data-i18n="register.form.experience">Research Experience</label>
+                            <select id="experience" name="experience">
+                                <option value="" data-i18n="register.form.experience.placeholder">Select experience level</option>
+                                <option value="0-3">0 - 3 years</option>
+                                <option value="3-6">3 - 6 years</option>
+                                <option value="6-10">6 - 10 years</option>
+                                <option value="10+">+10 years</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interests">Research Area / Field <span class="required">*</span></label>
+                            <select id="interests" name="interests" required>
+                                <option value="">Select your research area</option>
+                                <optgroup label="Business & Economics">
+                                    <option value="business-info-systems">Business Information Systems</option>
+                                    <option value="commerce">Commerce & Business Administration</option>
+                                    <option value="accounting">Accounting</option>
+                                    <option value="economics">Economics & Political Science</option>
+                                    <option value="management">Management & Marketing</option>
+                                    <option value="finance">Finance & Banking</option>
+                                </optgroup>
+                                <optgroup label="Medical & Health Sciences">
+                                    <option value="medicine">Medicine</option>
+                                    <option value="pharmacy">Pharmacy</option>
+                                    <option value="dentistry">Dentistry</option>
+                                    <option value="nursing">Nursing</option>
+                                    <option value="physiotherapy">Physiotherapy</option>
+                                    <option value="veterinary">Veterinary Medicine</option>
+                                    <option value="public-health">Public Health</option>
+                                </optgroup>
+                                <optgroup label="Engineering & Technology">
+                                    <option value="engineering">Engineering</option>
+                                    <option value="computer-science">Computer Science & IT</option>
+                                    <option value="architecture">Architecture & Urban Planning</option>
+                                    <option value="ai-data">Artificial Intelligence & Data Science</option>
+                                </optgroup>
+                                <optgroup label="Sciences">
+                                    <option value="science">Science (Physics, Chemistry, Biology)</option>
+                                    <option value="mathematics">Mathematics & Statistics</option>
+                                    <option value="agriculture">Agriculture</option>
+                                    <option value="environmental">Environmental Science</option>
+                                </optgroup>
+                                <optgroup label="Humanities & Social Sciences">
+                                    <option value="arts">Arts & Humanities</option>
+                                    <option value="education">Education</option>
+                                    <option value="law">Law</option>
+                                    <option value="social-work">Social Work</option>
+                                    <option value="psychology">Psychology</option>
+                                    <option value="sociology">Sociology</option>
+                                    <option value="philosophy">Philosophy</option>
+                                    <option value="history">History</option>
+                                    <option value="geography">Geography</option>
+                                </optgroup>
+                                <optgroup label="Languages & Communication">
+                                    <option value="arabic">Arabic Language & Literature</option>
+                                    <option value="english">English Language & Literature</option>
+                                    <option value="translation">Translation & Interpreting</option>
+                                    <option value="languages">Foreign Languages</option>
+                                    <option value="media">Mass Communication & Media</option>
+                                    <option value="journalism">Journalism</option>
+                                </optgroup>
+                                <optgroup label="Islamic & Religious Studies">
+                                    <option value="islamic-studies">Islamic Studies</option>
+                                    <option value="sharia">Sharia & Law</option>
+                                    <option value="quran">Quran & Islamic Sciences</option>
+                                    <option value="dawah">Da'wah & Islamic Culture</option>
+                                </optgroup>
+                                <optgroup label="Arts & Sports">
+                                    <option value="fine-arts">Fine Arts</option>
+                                    <option value="applied-arts">Applied Arts & Design</option>
+                                    <option value="music">Music & Performing Arts</option>
+                                    <option value="physical-education">Physical Education & Sports</option>
+                                </optgroup>
+                                <optgroup label="Tourism & Hospitality">
+                                    <option value="tourism">Tourism & Hotels</option>
+                                    <option value="archaeology">Archaeology & Egyptology</option>
+                                    <option value="heritage">Heritage & Museum Studies</option>
+                                </optgroup>
+                                <optgroup label="Other">
+                                    <option value="library-science">Library & Information Science</option>
+                                    <option value="home-economics">Home Economics</option>
+                                    <option value="specific-education">Specific Education</option>
+                                    <option value="interdisciplinary">Interdisciplinary Research</option>
+                                    <option value="other">Other</option>
+                                </optgroup>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group form-group-checkbox">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span class="checkmark"></span>
+                                <span data-i18n="register.form.newsletter">Send me updates about new features and research tips</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group form-group-checkbox">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span data-i18n="register.form.terms">I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a></span> <span class="required">*</span>
+                            </label>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-submit" id="submitBtn">
+                            <span class="btn-text" data-i18n="register.form.submit">Join the Shortlist</span>
+                            <span class="btn-loading">
+                                <svg class="spinner" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="31.4 31.4"/>
+                                </svg>
+                                <span data-i18n="register.form.processing">Processing...</span>
+                            </span>
+                        </button>
+                        
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration CTA Section -->
+    <section class="register" id="register">
+        <div class="register-bg">
+            <div class="register-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="section-title section-title-light" data-i18n="cta.title">Don't Miss Your <span class="text-gradient-light">Early Access</span></h2>
+                <p class="cta-description" data-i18n="cta.description">
+                    Spots are limited. Join the shortlist now and be among the first to experience the future of research analysis.
+                </p>
+                <div class="cta-actions">
+                    <a href="#custom" class="btn btn-secondary btn-lg">
+                        <span data-i18n="cta.primary">Secure Your Spot</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#products" class="btn btn-outline-light btn-lg" data-i18n="cta.secondary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo logo-footer">
+                        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4C24 4 28 12 28 20C28 28 24 36 24 36C24 36 20 28 20 20C20 12 24 4 24 4Z" fill="currentColor" opacity="0.9"/>
+                            <path d="M24 8C24 8 32 14 36 22C40 30 38 38 38 38C38 38 30 32 26 24C22 16 24 8 24 8Z" fill="currentColor" opacity="0.7"/>
+                            <path d="M24 8C24 8 16 14 12 22C8 30 10 38 10 38C10 38 18 32 22 24C26 16 24 8 24 8Z" fill="currentColor" opacity="0.7"/>
+                            <ellipse cx="24" cy="42" rx="8" ry="3" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                        <span class="logo-text">Lotus</span>
+                    </a>
+                    <p class="footer-description" data-i18n="footer.description">
+                        AI-powered platform for researchers and academics to analyze qualitative and quantitative data with precision.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.products">Products</h4>
+                    <ul>
+                        <li><a href="#products" data-i18n="footer.products.analysis">Analysis Tools</a></li>
+                        <li><a href="#products" data-i18n="footer.products.processing">Data Processing</a></li>
+                        <li><a href="#products" data-i18n="footer.products.visualization">Visualization</a></li>
+                        <li><a href="#products" data-i18n="footer.products.insights">AI Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.resources">Resources</h4>
+                    <ul>
+                        <li><a href="#resources" data-i18n="footer.resources.guides">Methodology Guides</a></li>
+                        <li><a href="#resources" data-i18n="footer.resources.tutorials">Tutorials</a></li>
+                        <li><a href="#resources" data-i18n="footer.resources.cases">Case Studies</a></li>
+                        <li><a href="#resources" data-i18n="footer.resources.docs">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.company.about">About Us</a></li>
+                        <li><a href="#" data-i18n="footer.company.contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer.company.privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="footer.company.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 Lotus Platform. All rights reserved. | AI-Powered Research Analysis</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h3 data-i18n="modal.title">You're on the Shortlist! 🎉</h3>
+            <p data-i18n="modal.description">Congratulations! You've secured your spot as a founding member of Lotus. We'll notify you as soon as early access begins.</p>
+            <button class="btn btn-primary" onclick="closeModal()" data-i18n="modal.btn">Continue Exploring</button>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
